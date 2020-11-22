@@ -15,7 +15,9 @@ class VideoController extends Controller
     public function index()
     {
         //
-        echo 'VideoController fiel';
+        return view('videos',[
+         'videos' =>Videos::all()
+     ]);
     }
 
     /**
@@ -72,7 +74,16 @@ class VideoController extends Controller
      */
     public function show($id)
     {
-        //
+        // display a particular video
+        $video = Videos::findOrFail($id);
+        $videourl= $video->url;
+        // need to convert the youtube URL into the Iframe URL - 
+        preg_match('%(?:youtube(?:-nocookie)?.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu.be/)([^"&?/ ]{11})%i', $videourl, $match);
+        $fullEmbedUrl = $match[1];
+        $fullEmbedUrl = 'https://www.youtube.com/embed/' . $fullEmbedUrl ;
+
+        return view('videoshow',compact('video','fullEmbedUrl'));
+       
     }
 
     /**
@@ -108,4 +119,6 @@ class VideoController extends Controller
     {
         //
     }
+
+   
 }

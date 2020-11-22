@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\CategoryController;
 use App\Models\Videos;
 
 
@@ -19,18 +20,10 @@ use App\Models\Videos;
 */
 Auth::routes();
 
-Route::get('/', function () {
-        $cat = request('cat');
-        $provider =request('provider');
-       // return $cat;
-        return view('welcome',[
-            'category' => $cat,
-            'provider' => $provider
-
-        ]);
-  
-    
+Route::get('/', function (){
+  return view('home');  
 });
+
 
  
 Route::get('/contact', function () {
@@ -58,13 +51,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
  Route::get('/addvideo', [VideoController::Class,'create']);
  Route::post('/addvideo',[VideoController::Class,'store']); 
  
- Route::get('videos',function(){
-     return view('videos',[
-         'videos' =>Videos::all()
-     ]);
-  }); 
+ Route::get('videos',[VideoController::Class,'index'])->name('videos'); 
 
   // route to show single video
- Route::get('/videos/watchv',function(){
-     return view('videos/watchv/')->name('watchv');
- });
+ Route::get('videos/{video}',[VideoController::Class,'show'])->name('watch');
+ Route::get('cats',[CategoryController::Class,'index'])->name('cats');
+

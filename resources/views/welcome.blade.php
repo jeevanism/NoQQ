@@ -24,7 +24,8 @@
 
                         <hr class="my-4">
 
-                        <a class="btn btn-primary btn-lg" href="<?php echo url('/profile');?>" role="button">Admin Login</a>
+                        <a class="btn btn-primary btn-lg" href="{{route('profile')}}" role="button">Admin Login</a>
+                        <a class="btn btn-secondary btn-lg" href="{{route('profile')}}" role="button">Video List</a>
                     </div>
                 </div>
 
