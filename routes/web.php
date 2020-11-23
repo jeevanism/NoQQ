@@ -57,3 +57,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
  Route::get('videos/{video}',[VideoController::Class,'show'])->name('watch');
  Route::get('cats',[CategoryController::Class,'index'])->name('cats');
 
+ Route::get('videos/delete/{video}',[VideoController::Class,'destroy']);
+

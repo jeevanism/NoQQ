@@ -2,6 +2,12 @@
 
 @section('content')
 
+@if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status')}}
+    </div>
+
+@endif
 <div class='container'>
     <div class='row justify-content-center'>
         <div class='col-md-12 col-lg-12 col-sm-12'>
@@ -20,7 +26,7 @@
                                 <a href="/videos/{{$video->id}}"><img
                                         src="http://noquittycareer.com/demo1/site/templates/assets/img/training1.jpg"
                                         class="img-fluid"></a>
-                                <h4><a href="/videos/{{$video->id}}">{{$video->name}}</a></h4>
+                                <h4><a href="{{url('videos/'.$video->id)}}">{{$video->name}}</a></h4>
                                 <strong>Category: {{$video->id}}</strong>
                                 <p>{{$video->descr}}
                                 </p>

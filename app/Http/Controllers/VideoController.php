@@ -117,7 +117,9 @@ class VideoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // delete a particular video
+        Videos::destroy($id);
+       return redirect('/videos')->with('status','Video'.$id.' is deleted');
     }
 
    
