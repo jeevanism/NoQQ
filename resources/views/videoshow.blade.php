@@ -7,8 +7,8 @@
             <div class='col-md-12 col-lg-12 col-sm-12'>
                 <div class="card">
                     <div class="card-header">
-                        The list of videos we haveideos
-                    </div>
+                        Please note that only limited videos are avialble for free. Please do the one time <a href="{{url('stripe-payment')}}">SUBSCRIPTION</a> to access videos unlimited !
+                        </div>
                     <div class='card-body'>
                         <h2>{{$video->name}}</h2>
                         <div class="embed-responsive embed-responsive-16by9">

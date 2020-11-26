@@ -13,7 +13,7 @@
         <div class='col-md-12 col-lg-12 col-sm-12'>
             <div class="card">
                 <div class="card-header">
-                    The list of videos we haveideos
+                    The list of videos we have - Please note that only limited videos are avialble for free. Please do the one time <a href="{{url('stripe-payment')}}">SUBSCRIPTION</a> to access videos unlimited !
                 </div>
                 <div class='card-body'>
                     <div class="row">
