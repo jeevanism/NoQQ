@@ -64,9 +64,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
  /**
   * Routes for Stripe Payement Actions
   */
- Route::get('/stripe-payment',[StripeController::Class,'index']);
+ Route::get('/stripe-payment',[StripeController::Class,'index'])->name('stripe-payment');;
  Route::post('/stripe-payment-process',[StripeController::Class,'process'])->name('stripe-payment-process'); 
 
  Route::get('/stripe-success',[StripeController::Class,'stripeSuccess'])->name('stripe-success');
+ 
 
   

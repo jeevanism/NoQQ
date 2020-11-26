@@ -17,6 +17,7 @@
                         @else
                           {{ __('Welcome to Noquitty') }}
                         <p>Click  <a href='{{route("videos")}}'>HERE</a> to view the Videos list </p> 
+                         <p>Click  <a href='{{route("stripe-payment")}}'>HERE</a> to Subscribe Our Premium Videos </p> 
 
 
                         @endif

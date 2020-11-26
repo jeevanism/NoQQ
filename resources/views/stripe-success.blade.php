@@ -11,7 +11,8 @@
 		                    </div>
 
 		                    <div class="col-md-8">
-		                    	<p>Congratulations, You are our primary member now. Please <a href="/videos">CLICK </a>here to access unlimited videos now !
+		                    	<p>Congratulations, You are our primary member now.
+		                    	 Please <a href="{{route('videos')}}">CLICK </a>here to access unlimited videos now !
 
 
 								 

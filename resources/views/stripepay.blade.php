@@ -24,10 +24,10 @@
 								
 							@else()
 								<div class="col-md-8">
-		                    	<p>If you are already a registered member, please click here to <a href="/login">Login</a>
+		                    	<p>If you are already a registered member, please click here to <a href="{{ route('login') }}">Login</a>
 		                    	</p>
-		                    	<p>If you are a Guest,Please register as a member  to SUBSCRIBE
-								<a href="/register"><input id="checkout-button" class="btn btn-primary" type="submit" value="register"></a>
+		                    	<p>If you are a Guest,Please register as a member SUBSCRIBE
+								<a href="{{ route('register') }}"><input id="checkout-button" class="btn btn-primary" type="submit" value="register"></a>
 		                    	</p>
 
 		                    </div>
